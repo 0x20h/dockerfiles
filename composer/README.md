@@ -1,7 +1,6 @@
 # PHP composer
 
 based on `alpine` and `PHP` use these images to run composer on your project.
-The images also issue a `self-update` before any command.
 
 ## Versions
 
