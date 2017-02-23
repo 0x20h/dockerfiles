@@ -16,8 +16,10 @@ The following variables can be overwritten via environment variables:
 - `STATSD_GRAPHITE_PROTOCOL`: text
 - `STATSD_GRAPHITE_PORT`: 2003
 - `STATSD_GRAPHITE_PICKLE_PORT`: 2004
+- `STATSD_GRAPHITE_GLOBAL_PREFIX`: stats
 - `STATSD_DEBUG`: false
 - `STATSD_DUMP_MESSAGES`: false
+- `STATSD_FLUSH_INTERVAL`: 10000
 
 To configure your own configuration you can also mount a custom
 [config.js](https://raw.githubusercontent.com/etsy/statsd/master/exampleConfig.js).
