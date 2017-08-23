@@ -9,7 +9,7 @@ services:
       - 5432:5432
   kong:
     build: kong
-    image: docker.int.sofort.io/atlas/kong
+    image: 0x20h/kong:0.11
     depends_on:
       - db
     environment:
