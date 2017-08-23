@@ -1,6 +1,6 @@
 # Kong
 
-Kong setup using `postgres` and `pgbi/kong-dashboard`.
+[Kong](https://getkong.org/) setup using `postgres` and `pgbi/kong-dashboard`.
 I changed the default `kong:0.11` image in order to
 
 - wait for the database to be available
