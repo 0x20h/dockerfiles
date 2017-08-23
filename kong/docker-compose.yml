@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    image: postgres:9-alpine
+    environment:
+      - POSTGRES_USER=kong
+      - POSTGRES_PASS=kong
+    ports:
+      - 5432:5432
+  kong:
+    build: kong
+    image: docker.int.sofort.io/atlas/kong
+    depends_on:
+      - db
+    environment:
+      - KONG_DATABASE=postgres
+      - KONG_PG_HOST=db
+    ports:
+      - 8000:8000
+      - 8443:8443
+      - 8001:8001
+      - 7946:7946
+      - 7946:7946/udp
+  ui:
+    image: pgbi/kong-dashboard:v2
+    ports:
+      - 8080:8080
