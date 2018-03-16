@@ -8,7 +8,7 @@ RUN apk --no-cache add python py-pip perl ca-certificates cairo libffi fontconfi
     apk --no-cache add --virtual builddeps g++ musl-dev python-dev libffi-dev cairo-dev && \
     pip install --upgrade pip && \
     pip install --trusted-host pypi.python.org django==1.4 simplejson==2.1.6 django-tagging==0.3.1 pytz \
-        graphite-web whisper cairocffi==0.7.2 gunicorn && \
+        graphite-web==0.9.14 whisper==0.9.14 cairocffi==0.7.2 gunicorn && \
     apk del builddeps
 
 # config 
